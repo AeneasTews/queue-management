@@ -22,5 +22,10 @@ int main(int argc, const char * argv[]) {
     Queue q = q1 + q2;
     q.print();
     
+    Queue q3 = q2 + q1;
+    q3.print();
+    
+    std::cout << q2.sum(0, 3);
+    
     return 0;
 }

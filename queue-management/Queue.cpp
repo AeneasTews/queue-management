@@ -64,7 +64,25 @@ void Queue::print(int position)
 
 int Queue::getItem(int position)
 {
+    if (position >= size) {
+        cout << "Out of range";
+        return NULL;
+    }
+    
     return queue[position];
+}
+
+int Queue::sum(int start, int end)
+{
+    if (end == -1)
+        end = size - 1;
+    int sum = 0;
+    
+    for (int i = start; i <= end; i++) {
+        sum += getItem(i);
+    }
+    
+    return sum;
 }
 
 Queue operator+(Queue q1, Queue q2)
