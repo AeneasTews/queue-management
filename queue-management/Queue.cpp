@@ -72,6 +72,11 @@ int Queue::getItem(int position)
     return queue[position];
 }
 
+void Queue::setItem(int Item, int position)
+{
+    queue[position] = Item;
+}
+
 int Queue::sum(int start, int end)
 {
     if (end == -1)
@@ -93,8 +98,8 @@ Queue operator+(Queue q1, Queue q2)
         q.add(q1.getItem(i));
     }
     
-    for (int i = q1.size; i < q1.size + q2.size; i++) {
-        q.add(q2.getItem(i - q1.size));
+    for (int i = 0; i < q2.size; i++) {
+        q.add(q2.getItem(i));
     }
     
     return q;

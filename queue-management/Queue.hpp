@@ -18,6 +18,7 @@ public:
     void remove(int position = -1);
     void print(int position = -1);
     int getItem(int position);
+    void setItem(int Item, int position);
     int sum(int start = 0, int end = -1);
     friend Queue operator+(Queue q1, Queue q2);
     
