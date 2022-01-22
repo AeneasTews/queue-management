@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220E7F61279CA38E00B9AC97 /* Queue2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 220E7F5F279CA38E00B9AC97 /* Queue2.cpp */; };
 		22FA27B8279A021700CF1E38 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22FA27B7279A021700CF1E38 /* main.cpp */; };
 		22FA27C0279A024100CF1E38 /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22FA27BE279A024100CF1E38 /* Queue.cpp */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		220E7F5F279CA38E00B9AC97 /* Queue2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Queue2.cpp; sourceTree = "<group>"; };
+		220E7F60279CA38E00B9AC97 /* Queue2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Queue2.hpp; sourceTree = "<group>"; };
 		22FA27B4279A021700CF1E38 /* queue-management */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "queue-management"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22FA27B7279A021700CF1E38 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		22FA27BE279A024100CF1E38 /* Queue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Queue.cpp; sourceTree = "<group>"; };
@@ -61,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				22FA27B7279A021700CF1E38 /* main.cpp */,
+				220E7F5F279CA38E00B9AC97 /* Queue2.cpp */,
+				220E7F60279CA38E00B9AC97 /* Queue2.hpp */,
 				22FA27BE279A024100CF1E38 /* Queue.cpp */,
 				22FA27BF279A024100CF1E38 /* Queue.hpp */,
 			);
@@ -125,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22FA27B8279A021700CF1E38 /* main.cpp in Sources */,
+				220E7F61279CA38E00B9AC97 /* Queue2.cpp in Sources */,
 				22FA27C0279A024100CF1E38 /* Queue.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

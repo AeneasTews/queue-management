@@ -22,7 +22,7 @@ public:
     int sum(int start = 0, int end = -1);
     friend Queue operator+(Queue q1, Queue q2);
     
-private:
+protected:
     int *queue;
     int size;
 };

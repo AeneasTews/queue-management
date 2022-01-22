@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include "Queue.hpp"
+#include "Queue2.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -25,7 +26,12 @@ int main(int argc, const char * argv[]) {
     Queue q3 = q2 + q1;
     q3.print();
     
-    std::cout << q2.sum(0, 3);
+    std::cout << q2.sum(0, 3) << std::endl;
+    
+    Queue2 q2_1;
+    
+    q2_1.add(3); q2_1.add(5); q2_1.add(7);
+    q2_1.print();
     
     return 0;
 }
