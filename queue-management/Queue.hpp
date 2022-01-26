@@ -23,7 +23,7 @@ public:
     friend Queue operator+(Queue q1, Queue q2);
     
 protected:
-    int *queue;
+    int* queue;
     int size;
 };
 

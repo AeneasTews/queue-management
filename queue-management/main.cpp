@@ -7,7 +7,8 @@
 
 #include <iostream>
 #include "Queue.hpp"
-#include "Queue2.hpp"
+#include "tQueue.hpp"
+#include "tQueue.cpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -28,10 +29,17 @@ int main(int argc, const char * argv[]) {
     
     std::cout << q2.sum(0, 3) << std::endl;
     
-    Queue2 q2_1;
+    tQueue<int> tQ1;
     
-    q2_1.add(3); q2_1.add(5); q2_1.add(7);
-    q2_1.print();
+    tQ1.add(4); tQ1.add(8); tQ1.add(2);
+    
+    tQ1.print();
+    
+    tQueue<std::string> tQ2;
+    
+    tQ2.add("Hello"); tQ2.add("world"); tQ2.add("!");
+    
+    tQ2.print();
     
     return 0;
 }
