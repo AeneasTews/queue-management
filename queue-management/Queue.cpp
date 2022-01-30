@@ -10,19 +10,22 @@
 
 using namespace std;
 
-Queue::Queue(int size)
+template <class T>
+Queue<T>::Queue(int size)
 : size(0)
 {
-    queue = new int[size];
+    queue = new T[size];
 }
 
-void Queue::add(int item)
+template <class T>
+void Queue<T>::add(T item)
 {
     queue[size] = item;
     size++;
 }
 
-void Queue::add(int item, int position)
+template <class T>
+void Queue<T>::add(T item, int position)
 {
     if (position > size - 1)
         cout << "Queue only has " << size << " position" << endl;
@@ -36,7 +39,8 @@ void Queue::add(int item, int position)
     }
 }
 
-void Queue::remove(int position){
+template <class T>
+void Queue<T>::remove(int position){
     if (position == -1)
         queue[size - 1] = NULL;
     else
@@ -48,7 +52,8 @@ void Queue::remove(int position){
     size--;
 }
 
-void Queue::print(int position)
+template <class T>
+void Queue<T>::print(int position)
 {
     if (position == -1) {
         for (int i = 0; i < size; i++) {
@@ -62,7 +67,8 @@ void Queue::print(int position)
     cout << endl;
 }
 
-int Queue::getItem(int position)
+template <class T>
+T Queue<T>::getItem(int position)
 {
     if (position >= size) {
         cout << "Out of range";
@@ -72,25 +78,14 @@ int Queue::getItem(int position)
     return queue[position];
 }
 
-void Queue::setItem(int Item, int position)
+template <class T>
+void Queue<T>::setItem(T Item, int position)
 {
     queue[position] = Item;
 }
 
-int Queue::sum(int start, int end)
-{
-    if (end == -1)
-        end = size - 1;
-    int sum = 0;
-    
-    for (int i = start; i <= end; i++) {
-        sum += getItem(i);
-    }
-    
-    return sum;
-}
-
-Queue operator+(Queue q1, Queue q2)
+template <class T>
+Queue<T> operator+(Queue<T> q1, Queue<T> q2)
 {
     Queue q(q1.size + q2.size);
     
@@ -104,3 +99,16 @@ Queue operator+(Queue q1, Queue q2)
     
     return q;
 }
+
+/*int Queue<T>::sum(int start, int end)
+{
+    if (end == -1)
+        end = size - 1;
+    int sum = 0;
+    
+    for (int i = start; i <= end; i++) {
+        sum += getItem(i);
+    }
+    
+    return sum;
+}*/

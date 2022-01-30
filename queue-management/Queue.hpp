@@ -9,24 +9,47 @@
 #define Queue_hpp
 
 #include <stdio.h>
+#include <iostream>
 
+template <class T>
 class Queue {
 public:
     Queue(int size = 100);
-    void add(int item);
-    void add(int item, int position);
+    void add(T item);
+    void add(T item, int position);
     void remove(int position = -1);
     void print(int position = -1);
-    int getItem(int position);
-    void setItem(int Item, int position);
-    int sum(int start = 0, int end = -1);
-    friend Queue operator+(Queue q1, Queue q2);
+    T getItem(int position);
+    void setItem(T Item, int position);
+    //int sum(int start = 0, int end = -1);
+    Queue operator+(Queue q1)
+    {
+        Queue q(q1.size + size);
+        
+        for (int i = 0; i < size; i++) {
+                    q.add(getItem(i));
+        }
+        
+        for (int i = 0; i < q1.size; i++) {
+            q.add(q1.getItem(i));
+        }
+        
+        return q;
+    }
     
 protected:
-    int* queue;
+    T* queue;
     int size;
 };
 
-Queue operator+(Queue q1, Queue q2);
+/*template <>
+class Queue <int> {
+public:
+    Queue(int size = 100);
+    int sum(int start = 0, int end = -1);
+protected:
+    int* queue;
+    int size;
+};*/
 
 #endif /* Queue_hpp */

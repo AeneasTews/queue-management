@@ -7,13 +7,12 @@
 
 #include <iostream>
 #include "Queue.hpp"
-#include "tQueue.hpp"
-#include "tQueue.cpp"
+#include "Queue.cpp"
 
 int main(int argc, const char * argv[]) {
     
-    Queue q1;
-    Queue q2;
+    Queue<int> q1;
+    Queue<int> q2;
     
     for (int i = 0; i < 30; i += 2) {
         q1.add(i);
@@ -27,19 +26,7 @@ int main(int argc, const char * argv[]) {
     Queue q3 = q2 + q1;
     q3.print();
     
-    std::cout << q2.sum(0, 3) << std::endl;
-    
-    tQueue<int> tQ1;
-    
-    tQ1.add(4); tQ1.add(8); tQ1.add(2);
-    
-    tQ1.print();
-    
-    tQueue<std::string> tQ2;
-    
-    tQ2.add("Hello"); tQ2.add("world"); tQ2.add("!");
-    
-    tQ2.print();
+    //std::cout << q2.sum(0, 3) << std::endl;
     
     return 0;
 }
